@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Sphere.ma
-//Last modified: Fri, Aug 22, 2025 02:42:14 PM
+//Last modified: Fri, Aug 22, 2025 02:44:33 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "17CBBD4B-4CB0-CACB-BAB7-DDB1089A569A";
+fileInfo "UUID" "A65A4919-49BB-B3C7-AEC5-1ABB05456DF7";
 createNode transform -s -n "persp";
 	rename -uid "383C46D4-4C19-2C70-FDAE-CEAF6B76B9E3";
 	setAttr ".v" no;
@@ -78,6 +78,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pSphere1";
 	rename -uid "8763343E-4C2F-F542-9FF7-DE946261A319";
+	setAttr ".t" -type "double3" 0.39829044768932276 0 0 ;
 createNode mesh -n "pSphereShape1" -p "pSphere1";
 	rename -uid "5CA7A2BD-4B77-D209-46C5-648CBB36685C";
 	setAttr -k off ".v";
@@ -170,7 +171,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 0 -max 144 -ast 0 -aet 144 ";
 	setAttr ".st" 6;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "FA637EFB-48E4-F2AD-CAD4-8D8CD4A835F8";
+	rename -uid "FE63BE7A-487B-4238-5AFB-1C910879FE26";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 0;
