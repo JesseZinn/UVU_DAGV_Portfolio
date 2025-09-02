@@ -1,0 +1,3 @@
+[submodule "UnityProjects/ArenaTest/Assets/tools"]
+	path = UnityProjects/ArenaTest/Assets/tools
+	url = https://github.com/anthonyromrell/ArtisanDream.Tools.git
