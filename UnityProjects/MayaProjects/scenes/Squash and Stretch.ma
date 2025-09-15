@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Squash and Stretch.ma
-//Last modified: Sun, Sep 14, 2025 02:16:17 PM
+//Last modified: Sun, Sep 14, 2025 02:18:28 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "F4FA80DB-44D2-ED39-5CBC-51AF6BC3482B";
+fileInfo "UUID" "F36D5FF0-47C1-71EB-0F84-6FAD1075CD9C";
 createNode transform -s -n "persp";
 	rename -uid "13237073-44B6-8E42-E87E-4E845EF1BAD3";
 	setAttr ".v" no;
@@ -2576,20 +2576,20 @@ createNode mesh -n "FloorShape" -p "Floor";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1B67F808-49F2-3680-87C5-FCB0BD0D32CD";
+	rename -uid "278453EF-4C75-9BD5-2BC2-77A51ADA9AB4";
 	setAttr -s 10 ".lnk";
 	setAttr -s 10 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "79BCDE25-49F6-FEA3-C1E0-16A3A9067CEF";
+	rename -uid "BCEF9AAB-456D-5A89-64DB-1E9E9C431414";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "886BE97C-4273-C509-2D4C-E3AB185DCA56";
+	rename -uid "19EB1257-4B2F-FE2B-0C1E-2D89F5062231";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BA96B547-45BD-C43C-3458-8283EECDCFB1";
+	rename -uid "68F558B9-4605-D81A-FBDC-09B98EDFF8BB";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "2262D685-4D37-FCCF-2E4B-E8917AA67BCB";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1D8C3AE0-4EE1-3A4F-9599-C3BBB47C1661";
+	rename -uid "7BCEC8CE-44BA-2D27-3A10-6A8B328032CE";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "61A4F28B-48A1-224A-D867-578AD995099B";
 	setAttr ".g" yes;
@@ -2994,7 +2994,7 @@ createNode animCurveTA -n "BowlingBall_rotateX";
 	setAttr -s 2 ".kit[1]"  18;
 	setAttr -s 2 ".kot[1]"  18;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "8CCE28B1-4703-BD96-460C-ED8A78B4067D";
+	rename -uid "D76749CB-4E2D-11BE-2994-6A90492C1323";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 144;
