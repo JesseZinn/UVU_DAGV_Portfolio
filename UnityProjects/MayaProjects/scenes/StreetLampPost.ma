@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: StreetLampPost.ma
-//Last modified: Tue, Oct 28, 2025 05:14:45 PM
+//Last modified: Tue, Oct 28, 2025 05:15:20 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,18 +13,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "FB5BB3BF-490B-1B78-F8FC-58A1FE733D96";
+fileInfo "UUID" "9B396703-4F72-7A08-7D70-A0A9DDC00A07";
 createNode transform -s -n "persp";
 	rename -uid "BF8F2367-4EC1-E015-61BF-369F7907A835";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1237.237334743357 1132.9187723840046 1990.9610059122147 ;
+	setAttr ".t" -type "double3" -1745.6582098170986 1506.6377511884118 2962.6920366618306 ;
 	setAttr ".r" -type "double3" -18.338353077024454 -5789.7999999999192 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F38B8BC7-449D-77F1-0200-A597299C03C7";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2511.364077994022;
+	setAttr ".coi" 3669.1975330793866;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -70055,7 +70055,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[1].ni[17].y" -438.57144165039062;
 	setAttr ".tgi[1].ni[17].nvs" 1923;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "9476A468-44DD-1078-302C-0394F8E0926E";
+	rename -uid "07E273CA-4BC1-CEE9-727D-DEA984366FB3";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
