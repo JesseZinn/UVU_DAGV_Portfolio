@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: Assembly-CSharp::FloatData
-  value: 1
+  value: 0
   minValue: 0
   maxValue: 1
   valueOutOfRange:
@@ -20,7 +20,16 @@ MonoBehaviour:
       m_Calls: []
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  onValueZero:
-    m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: OnValueZero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
