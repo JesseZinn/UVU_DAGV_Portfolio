@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class EnemyChase : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     private NavMeshAgent agent;
     public LayerMask whatIsGround;
 
@@ -16,6 +16,10 @@ public class EnemyChase : MonoBehaviour
 
     public float patrolRange;
 
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+    }
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
