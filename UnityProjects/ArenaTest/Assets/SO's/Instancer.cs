@@ -5,9 +5,12 @@ using System.Collections.Generic;
 public class EnemyInstancer : ScriptableObject
 {
     [SerializeField] private List<GameObject> objects = new List<GameObject>();
+    [SerializeField] public GameObject objectToInstantiate;
+    [SerializeField] public bool randomizeSpawnPoint;
+    public float ranValue;
 
 
-public void InstantiateObject(Transform position)
+public void InstantiateListObject(Transform position)
     {
         if (objects.Count != 0)
         {
@@ -17,6 +20,26 @@ public void InstantiateObject(Transform position)
         else
         {
             
+        }
+    }
+    public void InstantiateObject(Transform position)
+    {
+        if (objectToInstantiate == null) return;
+        else
+        {
+            if (randomizeSpawnPoint)
+            {
+                float x = Random.Range(position.position.x - ranValue, position.position.x + ranValue);
+                float z = Random.Range(position.position.z - ranValue, position.position.z + ranValue);
+
+                Vector3 ranPosition = new Vector3(x, position.position.y, z);
+
+                Instantiate(objectToInstantiate, ranPosition, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(objectToInstantiate, position.position, Quaternion.identity);
+            }
         }
     }
 }

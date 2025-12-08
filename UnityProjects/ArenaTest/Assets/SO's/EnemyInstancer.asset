@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: EnemyInstancer
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInstancer
   objects: []
+  objectToInstantiate: {fileID: 6528405412094737484, guid: 92a84e8dc21cb4041838c92fdb5437c5, type: 3}
+  randomizeSpawnPoint: 1
+  ranValue: 10

@@ -20,18 +20,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        MyInput();
         MovePlayer();
+        MyInput();
 
         // Gravity
-        if (controller.isGrounded && !jumping)
+        /*if (controller.isGrounded && !jumping)
         {
             if (velocity.y < 0)
                 velocity.y = -2f;
-        }
-
-
-        velocity.y += gravity * Time.deltaTime;
+        }*/
     }
     private void MyInput()
     {
@@ -53,7 +50,14 @@ public class PlayerMovement : MonoBehaviour
         move = transform.right * x + transform.forward * z;
 
         //controller.Move(move * speed * Time.deltaTime);
-        //controller.Move(new Vector3(move.x, transform.position.y, move.z));
+        if (controller.isGrounded)
+        {
+            controller.Move(new Vector3(move.x, -0.98f, move.z) * speed * Time.deltaTime);
+        }
+        else
+        {
+            controller.Move(new Vector3(move.x, -0.98f, move.z) * (speed * 0.5f) * Time.deltaTime);
+        }
     }
     private void ResetJump()
     {

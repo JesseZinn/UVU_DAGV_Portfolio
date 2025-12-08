@@ -4,10 +4,11 @@ using UnityEngine.AI;
 
 public class EnemyChase : MonoBehaviour
 {
-    private GameObject player;
+    private GameObject target;
     private NavMeshAgent agent;
     public LayerMask whatIsGround;
 
+    public bool patrol;
     private bool activated;
     private bool newPoint;
     private Vector3 distance;
@@ -18,7 +19,7 @@ public class EnemyChase : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player");
+        target = GameObject.Find("Tower");
     }
     private void Start()
     {
@@ -29,15 +30,16 @@ public class EnemyChase : MonoBehaviour
     }
     private void Update()
     {
-        distance = player.transform.position - transform.position;
+        distance = target.transform.position - transform.position;
         if (distance.magnitude < patrolRange) activated = true;
         else activated = false;
-        
-        Patrol();
+
+        if (patrol) Patrol();
+        else Chase();
     }
     private void Chase()
     {
-        agent.SetDestination(player.transform.position);
+        agent.SetDestination(target.transform.position);
     }
     private void Patrol()
     {
