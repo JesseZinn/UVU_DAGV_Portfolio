@@ -131,3 +131,5 @@ UnityProjects/ArenaTest/Assets/Textures/KatanaFBX_Mark 3_RedFabric_Normal.png.me
 UnityProjects/ArenaTest/Assets/Textures/KatanaFBX_Mark 3_RedFabric_Roughness.png.meta
 
 *.jpg
+
+*.exr
