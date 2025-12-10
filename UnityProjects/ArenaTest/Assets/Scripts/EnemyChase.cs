@@ -30,12 +30,16 @@ public class EnemyChase : MonoBehaviour
     }
     private void Update()
     {
-        distance = target.transform.position - transform.position;
-        if (distance.magnitude < patrolRange) activated = true;
-        else activated = false;
+        if (target == null) return;
+        else
+        {
+            distance = target.transform.position - transform.position;
+            if (distance.magnitude < patrolRange) activated = true;
+            else activated = false;
 
-        if (patrol) Patrol();
-        else Chase();
+            if (patrol) Patrol();
+            else Chase();
+        }
     }
     private void Chase()
     {

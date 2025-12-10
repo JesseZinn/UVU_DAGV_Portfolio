@@ -15,6 +15,7 @@ MonoBehaviour:
   value: 0
   minValue: 0
   maxValue: 1
+  targetSwitch: 1
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls: []
@@ -24,6 +25,21 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000}
         m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
         m_MethodName: OnValueZero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  loseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: bfe03812973be9c41861d9fd5e74904c, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

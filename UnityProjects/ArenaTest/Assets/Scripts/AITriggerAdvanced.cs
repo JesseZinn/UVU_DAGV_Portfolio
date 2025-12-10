@@ -11,13 +11,10 @@ public class AITriggerAdvanced : MonoBehaviour
         {
             playerTriggerEvent.Invoke();
         }
-        else if (other.CompareTag("Tower"))
+        if (other.CompareTag("Tower"))
         {
             towerTriggerEvent.Invoke();
-        }
-        else
-        {
-
+            Debug.Log("Towerrrrrrrr");
         }
     }
 }
